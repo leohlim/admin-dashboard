@@ -5,6 +5,7 @@
 
 .container {
     display: grid;
+    height: 100vh;
     grid-template-columns: 300px 4fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 'sidebar header' 'sidebar content' ;
@@ -34,10 +35,10 @@
 .sidebar ul  {
     list-style: none;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     font-weight: lighter;
     font-size: 24px;
-    padding: 10px;
+    padding: 2rem;
     
 }
 
@@ -77,26 +78,38 @@
 .main-content {
     display: grid;
     background-color: gray;
-    overflow: auto;
     grid-area: content;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: 'projects announcements' 'projects trending';
+    gap: 2rem;
     padding: 2rem;
+    overflow: auto;
 }
 
 .projects {
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-area: projects;
+
 }
 
-.announcements {
+.projects .cards {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+}
+
+
+
+
+.announcements {
     grid-area: announcements;
     grid-template-rows: min-content 1fr;
 }
 
 .trending {
-    display: grid;
     grid-area: trending;
     grid-template-rows: min-content 1fr;
 }
@@ -104,8 +117,10 @@
 .card {
     background-color: white;
     color: black;
+    padding: 2rem;
+    border-radius: 0.5rem;
 }
 
-h3 {
-    font-size: 30px;
+p {
+    font-size: 15px;
 }
