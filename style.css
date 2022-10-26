@@ -250,3 +250,30 @@ p {
 .logo {
     font-size: 28px;
 }
+
+.trend {
+    display: flex;
+    gap: 1rem;
+}
+
+.trend-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.username {
+    font-weight: bold;
+}
+.trend-pic {
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.trending .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
